@@ -24,15 +24,3 @@ Java 原生的 `SystemTray` API 只能添加 AWT 组件，而 AWT 组件对高 D
 1.  确保安装了 JDK (Java Development Kit) 8 或更高版本。
 2.  克隆或下载本项目。
 3.  直接运行 `SwingSystemTray.kt` 中的 `main` 函数。
-
-```kotlin
-fun main(args: Array<String>) {
-    SwingUtilities.invokeLater {
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName())
-            SwingSystemTray()
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-}
